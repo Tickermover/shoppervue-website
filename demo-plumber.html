@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tirion Plumbing Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE everyday trade, trustworthy
+   IDEA a plumber's branded van side panel
+   PICTURE van-style hero band with a drawn boiler and pipework
+   COLOUR white, ink #0e1a2b, van blue #0d5bd7, safety yellow #ffc21a
+   TYPE Barlow 800 + Inter
+   LAYOUT title left with call buttons, drawing right; phone stacks */
+:root{color-scheme:light dark;--bg:light-dark(#fff,#0f1622);--ink:light-dark(#0e1a2b,#eaf0f8);--soft:light-dark(#566275,#a8b4c4);--blue:#0d5bd7;--y:#ffc21a;--line:light-dark(#e2e7ee,#273244);--card:light-dark(#f4f7fb,#162132)}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Barlow,Inter,sans-serif;line-height:1.05;letter-spacing:-.01em;margin:0 0 .5em}
+h1{font-size:clamp(36px,5vw,58px);font-weight:800}h2{font-size:clamp(26px,3vw,36px);font-weight:800}
+.demo{background:var(--y);color:#111;text-align:center;font-size:14px;padding:8px 16px}
+.demo a{color:#111;font-weight:700}
+.band{padding:clamp(32px,5vw,64px) max(5vw,16px)}
+.wrap{max-width:1180px;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;padding:14px max(5vw,16px);border-bottom:1px solid var(--line)}
+.top b{font:800 22px Barlow,sans-serif}.top span{margin-left:auto;font-weight:600}
+.hero{background:var(--blue);color:#fff}
+.hg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
+.hero p{font-size:19px;opacity:.92}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.b{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:10px;font-weight:700;text-decoration:none}
+.b1{background:var(--y);color:#111}.b2{border:2px solid #fff;color:#fff}
+.fig{position:relative;min-height:320px}.fig svg{position:absolute;inset:0;width:100%;height:100%}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(12em,1fr));gap:16px;font-weight:600}
+.trust div{border-left:4px solid var(--y);padding-left:12px}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(16em,1fr));gap:18px}
+.svc div{background:var(--card);border-radius:14px;padding:20px}
+.svc b{font-size:18px;display:block}.svc span{color:var(--soft);white-space:nowrap}
+.area{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{background:var(--card);border-radius:999px;padding:6px 14px;font-weight:600}
+.rev{background:var(--card);border-radius:14px;padding:20px}
+footer{border-top:1px solid var(--line);color:var(--soft);font-size:14px}
+@media(max-width:780px){.hg,.area{grid-template-columns:minmax(0,1fr)}.fig{min-height:240px}}
+</style>
+</head>
+<body>
+<div class="demo">Demo website by ShopperVue for a fictional business. Names, numbers and details are made up. <a href="index.html#work">Back to ShopperVue</a></div>
+<div class="top"><b>Tirion Plumbing &amp; Heating</b><span>Call 01632 960 214</span></div>
+<section class="band hero"><div class="wrap hg">
+  <div>
+    <h1>Boiler repairs and plumbing in Port Talbot, same day where we can.</h1>
+    <p>Gas Safe registered engineers. Fixed call-out price. Clean, tidy and on time.</p>
+    <div class="btns"><a class="b b1" href="tel:01632960214">Call now</a><a class="b b2" href="https://wa.me/447700900214">WhatsApp a photo</a></div>
+  </div>
+  <div class="fig" aria-hidden="true"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet">
+    <rect x="120" y="30" width="160" height="200" rx="16" fill="#fff"/><rect x="120" y="30" width="160" height="200" rx="16" fill="none" stroke="#ffc21a" stroke-width="6"/>
+    <rect x="150" y="60" width="100" height="40" rx="8" fill="#0e1a2b"/><text x="200" y="87" fill="#7CFC9A" font-family="Inter" font-size="18" font-weight="700" text-anchor="middle">60°C</text>
+    <circle cx="170" cy="140" r="12" fill="#d9e3f2"/><circle cx="230" cy="140" r="12" fill="#d9e3f2"/>
+    <path d="M160 230V270H80M200 230V280M240 230V270H330" stroke="#ffc21a" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M60 270H90M320 270H350" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+  </svg></div>
+</div></section>
+<section class="band"><div class="wrap trust"><div>Gas Safe registered</div><div>4.9 stars on Google (sample)</div><div>No call-out charge 8am to 6pm</div><div>12-month guarantee on parts and labour</div></div></section>
+<section class="band" style="padding-top:0"><div class="wrap">
+  <h2>Services and prices</h2>
+  <div class="svc">
+    <div><b>Boiler service</b><span>from £75</span><p>Full Gas Safe service with certificate.</p></div>
+    <div><b>Boiler repair</b><span>from £90</span><p>Most faults fixed on the first visit.</p></div>
+    <div><b>New boiler</b><span>from £1,950</span><p>Fitted in a day, up to 10-year warranty.</p></div>
+    <div><b>Leaks and blockages</b><span>from £65</span><p>Taps, toilets, pipes and drains.</p></div>
+    <div><b>Landlord gas certificate</b><span>£60</span><p>CP12 for rented homes, reminder each year.</p></div>
+    <div><b>Bathroom fitting</b><span>quote</span><p>Free visit and written quote.</p></div>
+  </div>
+</div></section>
+<section class="band" style="padding-top:0"><div class="wrap area">
+  <div><h2>Areas we cover</h2><div class="chips"><span>Port Talbot</span><span>Aberavon</span><span>Baglan</span><span>Neath</span><span>Briton Ferry</span><span>Cwmafan</span><span>Margam</span><span>Pyle</span></div>
+  <p style="margin-top:16px">Monday to Friday 8am to 6pm, Saturday 9am to 1pm. Emergency call-outs by arrangement.</p></div>
+  <div class="rev"><p>"Booked in the morning, boiler working again by lunch. Explained everything and left the place spotless."</p><p style="margin:0;color:var(--soft)">Sample review layout. Real reviews are shown from your Google profile.</p></div>
+</div></section>
+<footer class="band"><div class="wrap">Tirion Plumbing &amp; Heating Ltd (fictional) · 01632 960 214 · Port Talbot · Website by <a href="index.html">ShopperVue</a></div></footer>
+</body>
+</html>

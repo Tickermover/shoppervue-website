@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample Listing Check</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE work, a one-page audit
+   IDEA a printed inspection sheet with a score and a checklist
+   PICTURE score bars comparing the business with 3 nearby competitors
+   COLOUR white, ink #121417, pin red #e8412c, pass green #1e9e57, amber #e5a100
+   TYPE Archivo 800 + Inter
+   LAYOUT finding and score on top, comparison bars, then checklist and 3 fixes; A4-friendly */
+:root{color-scheme:light dark;--bg:light-dark(#fff,#111418);--ink:light-dark(#121417,#eef1f4);--soft:light-dark(#5a626d,#a9b2bd);--line:light-dark(#e3e6ea,#2a3038);--red:#e8412c;--ok:#1e9e57;--amb:#e5a100;--card:light-dark(#f6f7f9,#1a1f26)}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2{font-family:Archivo,Inter,sans-serif;line-height:1.08;letter-spacing:-.02em;margin:0 0 .4em}
+h1{font-size:clamp(28px,4vw,42px)}h2{font-size:22px;margin-top:28px}
+.demo{background:#fde7e3;color:#8a1f10;text-align:center;font-size:14px;padding:8px 16px}.demo a{color:#8a1f10;font-weight:700}
+.page{max-width:860px;margin:0 auto;padding:clamp(24px,4vw,48px) max(4vw,16px)}
+.headrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:start}
+.big{font:800 72px/1 Archivo,sans-serif;color:var(--red);text-align:right}
+.big small{display:block;font:600 14px Inter,sans-serif;color:var(--soft)}
+.meta{color:var(--soft);font-size:15px}
+.bars{display:grid;gap:10px;margin-top:10px}
+.bar{display:grid;grid-template-columns:minmax(9em,13em) minmax(0,1fr) 3.5em;gap:12px;align-items:center;font-size:15px}
+.track{background:var(--card);border-radius:6px;height:22px;overflow:hidden}
+.fill{height:100%;background:#9aa4b1}.me .fill{background:var(--red)}
+.bar b{text-align:right;font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.p{color:var(--ok);font-weight:700}.f{color:var(--red);font-weight:700}.w{color:var(--amb);font-weight:700}
+ol li{margin-bottom:8px}
+.foot{margin-top:28px;font-size:13px;color:var(--soft);border-top:1px solid var(--line);padding-top:12px}
+@media(max-width:600px){.headrow{grid-template-columns:minmax(0,1fr)}.big{text-align:left}.bar{grid-template-columns:minmax(0,1fr) 3em}.bar .track{grid-column:1/-1;order:3}}
+@media print{.demo{display:none}}
+</style>
+</head>
+<body>
+<div class="demo">Sample report for a fictional business, showing the free check ShopperVue sends. <a href="index.html#work">Back to ShopperVue</a></div>
+<div class="page">
+  <div class="headrow">
+    <div><h1>Tirion Plumbing &amp; Heating is easy to miss on Google Maps</h1>
+    <p class="meta">Google listing check · Plumber · Port Talbot · prepared by ShopperVue</p></div>
+    <div class="big">41<small>listing health score out of 100</small></div>
+  </div>
+  <p>Good reviews from real customers, but the listing is missing the basics that help Google show it. Three fixes below would take the score to about 85.</p>
+
+  <h2>How you compare with 3 nearby plumbers</h2>
+  <div class="bars" id="bars"></div>
+
+  <h2>Checklist</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Item</th><th>Result</th><th>Why it matters</th></tr></thead>
+    <tbody>
+      <tr><td>Profile claimed by owner</td><td class="f">No</td><td>You can't reply to reviews or fix wrong details.</td></tr>
+      <tr><td>Opening hours</td><td class="f">Missing</td><td>People can't tell if you're available today.</td></tr>
+      <tr><td>Website link</td><td class="w">Facebook page only</td><td>Many people want prices and services before calling.</td></tr>
+      <tr><td>Photos</td><td class="w">2</td><td>Competitors show 20 to 60 job photos.</td></tr>
+      <tr><td>Reviews</td><td class="p">24, rated 4.8</td><td>Strong. Keep asking every customer.</td></tr>
+      <tr><td>Replies to reviews</td><td class="f">0 of last 10</td><td>Replies show new customers you care.</td></tr>
+      <tr><td>Services listed</td><td class="f">None</td><td>Helps Google match you to "boiler repair near me".</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>The 3 quickest fixes</h2>
+  <ol>
+    <li><b>Claim the profile.</b> 10 minutes with Google's postcard or phone check. Then add us as manager if you want us to do the rest.</li>
+    <li><b>Add hours, services and 15 real job photos.</b> This is what complete listings have and you don't.</li>
+    <li><b>Reply to your last 10 reviews</b> and start asking every customer for one with a QR card.</li>
+  </ol>
+  <p>We can do all of this for a one-off £99 within 7 days, by email only.</p>
+  <p class="foot">Based on public Google Maps information on the date of the check. Scores are ShopperVue's own measure of listing completeness, not a Google ranking. ShopperVue · hello@shoppervue.com · Port Talbot</p>
+</div>
+<script>
+{
+  const d=[["Tirion Plumbing (you)",41,1],["Competitor A, Aberavon",88,0],["Competitor B, Baglan",79,0],["Competitor C, Neath",64,0]];
+  document.getElementById('bars').innerHTML=d.map(([n,v,me])=>`<div class="bar ${me?'me':''}"><span>${n}</span><div class="track"><div class="fill" style="width:${v}%"></div></div><b>${v}</b></div>`).join('');
+}
+</script>
+</body>
+</html>

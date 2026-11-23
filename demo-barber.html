@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gwennol Barbers Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE everyday, confident local shop
+   IDEA a barber's shop window with a price board
+   PICTURE striped barber pole and the chalk-style price list itself
+   COLOUR charcoal #161616, warm brass #c9a063, off-white text, pole red #d33a2c
+   TYPE Oswald 700 + Inter
+   LAYOUT title and pole on top, price board as the main block; phone stacks */
+:root{color-scheme:dark;--bg:#161616;--ink:#f2ede4;--soft:#b9b0a2;--brass:#c9a063;--red:#d33a2c;--card:#211f1c;--line:#34302a}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2{font-family:Oswald,Inter,sans-serif;line-height:1.05;margin:0 0 .4em;letter-spacing:.01em}
+h1{font-size:clamp(40px,6vw,68px)}h2{font-size:clamp(26px,3vw,36px);color:var(--brass)}
+.demo{background:var(--brass);color:#111;text-align:center;font-size:14px;padding:8px 16px}.demo a{color:#111;font-weight:700}
+.band{padding:clamp(32px,5vw,64px) max(5vw,16px)}.wrap{max-width:1100px;margin:0 auto}
+.hero{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:center}
+.pole{width:70px;height:260px;border-radius:35px;border:6px solid var(--brass);background:repeating-linear-gradient(135deg,var(--red) 0 22px,#fff 22px 44px,#2c5fd6 44px 66px,#fff 66px 88px)}
+.hero p{font-size:19px;color:var(--soft)}
+.b{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;background:var(--brass);color:#111;font-weight:700;text-decoration:none;margin:8px 10px 0 0}
+.b2{background:transparent;border:2px solid var(--brass);color:var(--brass)}
+.board{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 40px;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:24px}
+.row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding:8px 0;font-size:17px}
+.row span:last-child{color:var(--brass);font-weight:700;white-space:nowrap}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(15em,1fr));gap:24px}
+table{border-collapse:collapse;width:100%}td{padding:4px 0}td:last-child{text-align:right;white-space:nowrap}
+footer{border-top:1px solid var(--line);color:var(--soft);font-size:14px}footer a{color:var(--brass)}
+@media(max-width:700px){.hero{grid-template-columns:minmax(0,1fr)}.pole{height:120px;width:100%;border-radius:20px}.board{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div class="demo">Demo website by ShopperVue for a fictional business. Names, numbers and details are made up. <a href="index.html#work">Back to ShopperVue</a></div>
+<section class="band"><div class="wrap hero">
+  <div class="pole" aria-hidden="true"></div>
+  <div><h1>Gwennol Barbers, Neath</h1><p>Skin fades, beard trims and kids' cuts. Walk in or book a time online and skip the queue.</p>
+  <a class="b" href="#">Book online</a><a class="b b2" href="tel:01632960518">01632 960 518</a></div>
+</div></section>
+<section class="band" style="padding-top:0"><div class="wrap">
+  <h2>Price list</h2>
+  <div class="board">
+    <div class="row"><span>Skin fade</span><span>£16</span></div><div class="row"><span>Scissor cut</span><span>£15</span></div>
+    <div class="row"><span>Clipper cut, all over</span><span>£10</span></div><div class="row"><span>Beard trim and line-up</span><span>£8</span></div>
+    <div class="row"><span>Hot towel shave</span><span>£18</span></div><div class="row"><span>Cut and beard</span><span>£22</span></div>
+    <div class="row"><span>Kids under 12</span><span>£11</span></div><div class="row"><span>OAP, Tuesday to Thursday</span><span>£10</span></div>
+  </div>
+</div></section>
+<section class="band" style="padding-top:0"><div class="wrap info">
+  <div><h2>Opening hours</h2><table><tr><td>Monday</td><td>Closed</td></tr><tr><td>Tuesday to Friday</td><td>9am to 6pm</td></tr><tr><td>Saturday</td><td>8am to 4pm</td></tr><tr><td>Sunday</td><td>10am to 2pm</td></tr></table></div>
+  <div><h2>Find us</h2><p>14 Green Street, Neath (fictional address). Free parking behind the shop. Card and cash.</p></div>
+  <div><h2>Reviews</h2><p>"Best fade in Neath, always on time with bookings." Sample review layout; real reviews come from your Google profile.</p></div>
+</div></section>
+<footer class="band"><div class="wrap">Gwennol Barbers (fictional) · Website by <a href="index.html">ShopperVue</a></div></footer>
+</body>
+</html>
