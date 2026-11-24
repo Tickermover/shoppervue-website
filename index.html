@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ShopperVue · Get found on Google Maps</title>
 <meta name="description" content="ShopperVue helps trades, garages, salons and local shops in Port Talbot, Neath, Swansea and Bridgend get found on Google Maps. Fixed prices, no contracts, everything by email.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#0a0d1a">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,8 +34,12 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-
 .nav-in{pointer-events:auto;display:flex;align-items:center;gap:28px;padding:10px 10px 10px 20px;border-radius:999px;background:rgba(14,18,36,.55);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid var(--line);color:#fff;transition:background .4s var(--ease),box-shadow .4s}
 .nav.solid .nav-in{background:rgba(14,18,36,.86);box-shadow:0 10px 40px rgba(0,0,0,.25)}
 .logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;text-decoration:none;letter-spacing:-.02em}
-.logo svg{width:17px;height:22px}
-.logo .vue{color:#d9651c}
+.lw{display:inline-flex;align-items:baseline;font-size:20px}
+.vmark{width:1.25em;height:1.5em;margin:0 -.17em 0 -.08em;transform:translateY(.38em);overflow:visible}
+.rp1,.rp2{transform-box:fill-box;transform-origin:center;animation:ping 3.2s ease-out infinite}
+.rp2{animation-delay:.5s}
+@keyframes ping{0%{transform:scale(.6);opacity:0}25%{opacity:1}100%{transform:scale(1.35);opacity:0}}
+footer .lw{font-size:22px}
 .nav nav{display:flex;gap:22px;font-size:14.5px}
 .nav nav a{text-decoration:none;opacity:.75;transition:opacity .2s}
 .nav nav a:hover{opacity:1}
@@ -246,7 +251,7 @@ footer b{color:#fff;display:block;margin-bottom:8px}
 <body>
 
 <header class="nav" id="nav"><div class="nav-in">
-  <a class="logo" href="#top"><svg viewBox="0 0 22 28" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a3d"/><stop offset="1" stop-color="#ff4d2e"/></linearGradient></defs><path d="M11 0C4.9 0 0 4.9 0 11c0 8 11 17 11 17s11-9 11-17C22 4.9 17.1 0 11 0z" fill="url(#lg)"/><circle cx="11" cy="11" r="4.2" fill="#fff"/></svg><span>Shopper<span class="vue">Vue</span></span></a>
+  <a class="logo" href="#top" aria-label="ShopperVue home"><span class="lw">Shopper<svg class="vmark" viewBox="-8 -6 100 120" aria-hidden="true"><defs><linearGradient id="vg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ef7a2a"/><stop offset="1" stop-color="#c2531a"/></linearGradient></defs><path d="M6 8h20l16 58L58 8h20L50 92H34Z" fill="url(#vg)"/><ellipse class="rp1" cx="42" cy="99" rx="14" ry="3.2" fill="none" stroke="#d9651c" stroke-width="2.6"/><ellipse class="rp2" cx="42" cy="99" rx="27" ry="6" fill="none" stroke="#d9651c" stroke-width="2" opacity=".45"/></svg>ue</span></a>
   <nav aria-label="Main"><a href="#services">Pricing</a><a href="#how">How it works</a><a href="#work">Our work</a><a href="#about">About</a></nav>
   <a class="pill red" href="#check">Free check <span class="ar">→</span></a>
 </div></header>
@@ -415,7 +420,7 @@ footer b{color:#fff;display:block;margin-bottom:8px}
 
 <footer><div class="wrap">
   <div class="cols">
-    <div><a class="logo" href="#top"><svg viewBox="0 0 22 28" aria-hidden="true"><path d="M11 0C4.9 0 0 4.9 0 11c0 8 11 17 11 17s11-9 11-17C22 4.9 17.1 0 11 0z" fill="#ff4d2e"/><circle cx="11" cy="11" r="4.2" fill="#fff"/></svg><span>Shopper<span class="vue">Vue</span></span></a><p>Google Maps, websites and reviews for local businesses in South Wales.</p></div>
+    <div><a class="logo" href="#top" aria-label="ShopperVue home"><span class="lw">Shopper<svg class="vmark" viewBox="-8 -6 100 120" aria-hidden="true"><defs><linearGradient id="vg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ef7a2a"/><stop offset="1" stop-color="#c2531a"/></linearGradient></defs><path d="M6 8h20l16 58L58 8h20L50 92H34Z" fill="url(#vg2)"/><ellipse class="rp1" cx="42" cy="99" rx="14" ry="3.2" fill="none" stroke="#d9651c" stroke-width="2.6"/><ellipse class="rp2" cx="42" cy="99" rx="27" ry="6" fill="none" stroke="#d9651c" stroke-width="2" opacity=".45"/></svg>ue</span></a><p>Google Maps, websites and reviews for local businesses in South Wales.</p></div>
     <div><b>Contact</b><a href="mailto:hello@shoppervue.com">hello@shoppervue.com</a><br>Port Talbot, Wales</div>
     <div><b>Legal</b>ShopperVue is a trading name of Mousumi Kheto, sole trader, Port Talbot.<br><a href="privacy.html">Privacy notice</a></div>
   </div>
