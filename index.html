@@ -34,6 +34,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-
 .nav.solid .nav-in{background:rgba(14,18,36,.86);box-shadow:0 10px 40px rgba(0,0,0,.25)}
 .logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;text-decoration:none;letter-spacing:-.02em}
 .logo svg{width:17px;height:22px}
+.logo .vue{color:#d9651c}
 .nav nav{display:flex;gap:22px;font-size:14.5px}
 .nav nav a{text-decoration:none;opacity:.75;transition:opacity .2s}
 .nav nav a:hover{opacity:1}
@@ -50,7 +51,7 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-
 .mesh{position:absolute;inset:-20%;z-index:-2;filter:blur(70px);opacity:.75}
 .mesh i{position:absolute;border-radius:50%;animation:drift 18s ease-in-out infinite alternate}
 .mesh i:nth-child(1){width:46vw;height:46vw;left:48%;top:0;background:radial-gradient(circle,#ff4d2e 0,transparent 65%)}
-.mesh i:nth-child(2){width:40vw;height:40vw;left:5%;top:30%;background:radial-gradient(circle,#3a4cff 0,transparent 65%);animation-duration:22s}
+.mesh i:nth-child(2){width:40vw;height:40vw;left:5%;top:30%;background:radial-gradient(circle,#28307a 0,transparent 65%);opacity:.55;animation-duration:22s}
 .mesh i:nth-child(3){width:34vw;height:34vw;left:62%;top:45%;background:radial-gradient(circle,#ff8a3d 0,transparent 60%);animation-duration:26s}
 @keyframes drift{to{transform:translate(-8%,6%) scale(1.15)}}
 .grid-bg{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 30%,transparent 75%)}
@@ -245,7 +246,7 @@ footer b{color:#fff;display:block;margin-bottom:8px}
 <body>
 
 <header class="nav" id="nav"><div class="nav-in">
-  <a class="logo" href="#top"><svg viewBox="0 0 22 28" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a3d"/><stop offset="1" stop-color="#ff4d2e"/></linearGradient></defs><path d="M11 0C4.9 0 0 4.9 0 11c0 8 11 17 11 17s11-9 11-17C22 4.9 17.1 0 11 0z" fill="url(#lg)"/><circle cx="11" cy="11" r="4.2" fill="#fff"/></svg>ShopperVue</a>
+  <a class="logo" href="#top"><svg viewBox="0 0 22 28" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a3d"/><stop offset="1" stop-color="#ff4d2e"/></linearGradient></defs><path d="M11 0C4.9 0 0 4.9 0 11c0 8 11 17 11 17s11-9 11-17C22 4.9 17.1 0 11 0z" fill="url(#lg)"/><circle cx="11" cy="11" r="4.2" fill="#fff"/></svg><span>Shopper<span class="vue">Vue</span></span></a>
   <nav aria-label="Main"><a href="#services">Pricing</a><a href="#how">How it works</a><a href="#work">Our work</a><a href="#about">About</a></nav>
   <a class="pill red" href="#check">Free check <span class="ar">→</span></a>
 </div></header>
@@ -414,7 +415,7 @@ footer b{color:#fff;display:block;margin-bottom:8px}
 
 <footer><div class="wrap">
   <div class="cols">
-    <div><a class="logo" href="#top"><svg viewBox="0 0 22 28" aria-hidden="true"><path d="M11 0C4.9 0 0 4.9 0 11c0 8 11 17 11 17s11-9 11-17C22 4.9 17.1 0 11 0z" fill="#ff4d2e"/><circle cx="11" cy="11" r="4.2" fill="#fff"/></svg>ShopperVue</a><p>Google Maps, websites and reviews for local businesses in South Wales.</p></div>
+    <div><a class="logo" href="#top"><svg viewBox="0 0 22 28" aria-hidden="true"><path d="M11 0C4.9 0 0 4.9 0 11c0 8 11 17 11 17s11-9 11-17C22 4.9 17.1 0 11 0z" fill="#ff4d2e"/><circle cx="11" cy="11" r="4.2" fill="#fff"/></svg><span>Shopper<span class="vue">Vue</span></span></a><p>Google Maps, websites and reviews for local businesses in South Wales.</p></div>
     <div><b>Contact</b><a href="mailto:hello@shoppervue.com">hello@shoppervue.com</a><br>Port Talbot, Wales</div>
     <div><b>Legal</b>ShopperVue is a trading name of Mousumi Kheto, sole trader, Port Talbot.<br><a href="privacy.html">Privacy notice</a></div>
   </div>
