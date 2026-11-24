@@ -33,9 +33,9 @@ em.s{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-
 .nav{position:fixed;inset:14px 0 auto;z-index:50;display:flex;justify-content:center;pointer-events:none}
 .nav-in{pointer-events:auto;display:flex;align-items:center;gap:28px;padding:10px 10px 10px 20px;border-radius:999px;background:rgba(14,18,36,.55);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid var(--line);color:#fff;transition:background .4s var(--ease),box-shadow .4s}
 .nav.solid .nav-in{background:rgba(14,18,36,.86);box-shadow:0 10px 40px rgba(0,0,0,.25)}
-.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;text-decoration:none;letter-spacing:-.02em}
+.logo{display:flex;align-items:center;line-height:1;gap:9px;font-weight:800;font-size:18px;text-decoration:none;letter-spacing:-.02em}
 .lw{display:inline-flex;align-items:baseline;font-size:20px}
-.vmark{width:1.25em;height:1.5em;margin:0 -.17em 0 -.08em;transform:translateY(.38em);overflow:visible}
+.vmark{width:1.08em;height:1.3em;margin:0 -.15em 0 -.07em;transform:translateY(.24em);overflow:visible}
 .rp1,.rp2{transform-box:fill-box;transform-origin:center;animation:ping 3.2s ease-out infinite}
 .rp2{animation-delay:.5s}
 @keyframes ping{0%{transform:scale(.6);opacity:0}25%{opacity:1}100%{transform:scale(1.35);opacity:0}}
@@ -61,7 +61,7 @@ footer .lw{font-size:22px}
 @keyframes drift{to{transform:translate(-8%,6%) scale(1.15)}}
 .grid-bg{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 30%,transparent 75%)}
 .hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.badge{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);font-size:13.5px;color:#d6dbea}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:999px;background:#151a30;box-shadow:0 0 0 6px #0a0d1a;border:1px solid var(--line);font-size:13.5px;color:#d6dbea}
 .badge b{background:var(--green);color:#04210f;border-radius:999px;padding:3px 9px;font-size:12px}
 .hero h1{font-size:clamp(44px,6.4vw,84px);margin:22px 0 22px}
 .hero h1 em.s,.hero h1 em.s span{background:linear-gradient(100deg,#ff8a3d,#ff4d2e 60%,#ff6fa0);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
@@ -162,16 +162,19 @@ section{padding:120px 0}
 .step p{color:var(--soft);font-size:15px}
 
 /* work */
-.wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.wk{text-decoration:none;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid #e6e2d8;transition:transform .5s var(--ease),box-shadow .5s}
-.wk:hover{transform:translateY(-8px) rotate(-.4deg);box-shadow:0 30px 60px rgba(20,23,38,.14)}
-.thumb{height:210px;position:relative;overflow:hidden;padding:18px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
-.thumb .bw{position:absolute;inset:16px 16px auto;height:120px;border-radius:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);transition:transform .6s var(--ease)}
-.thumb .bw::before{content:"";position:absolute;top:10px;left:12px;width:36px;height:6px;border-radius:3px;background:rgba(255,255,255,.5);box-shadow:0 18px 0 -1px rgba(255,255,255,.35),40px 18px 0 -1px rgba(255,255,255,.2),0 36px 0 6px rgba(255,255,255,.25)}
-.wk:hover .bw{transform:translateY(-8px) scale(1.03)}
-.thumb b{position:relative;font-size:18px;letter-spacing:-.02em}
-.meta{padding:18px 20px 22px;font-weight:600;font-size:15px}
-.meta span{display:block;font-weight:400;color:var(--soft);font-size:13px;margin-top:4px}
+.wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.wk{text-decoration:none;border-radius:24px;overflow:hidden;background:#fff;border:1px solid #e6e2d8;transition:transform .6s var(--ease),box-shadow .6s;display:block}
+.wk:hover{transform:translateY(-8px);box-shadow:0 40px 80px rgba(20,23,38,.16)}
+.bf{margin:14px 14px 0;border-radius:14px 14px 0 0;overflow:hidden;background:#1b1f30;box-shadow:0 10px 30px rgba(20,23,38,.12)}
+.bar{display:flex;align-items:center;gap:6px;padding:10px 12px;background:#1b1f30}
+.bar i{width:9px;height:9px;border-radius:50%;background:#3a4060}.bar i:nth-child(1){background:#ff5f57}.bar i:nth-child(2){background:#febc2e}.bar i:nth-child(3){background:#28c840}
+.bar span{margin-left:10px;flex:1;background:#262b42;border-radius:6px;padding:3px 10px;font-size:11.5px;color:#9aa3bd}
+.shot{height:330px;background-size:100% auto;background-position:50% 0;background-repeat:no-repeat;background-color:#fff;transition:background-position 7s cubic-bezier(.45,0,.25,1)}
+.wk:hover .shot{background-position:50% 100%}
+.meta{padding:20px 24px 24px;font-weight:700;font-size:19px;letter-spacing:-.02em}
+.meta em{display:block;font-style:normal;font-weight:500;font-size:15px;color:var(--soft);letter-spacing:0;margin-top:2px}
+.meta span{display:block;font-weight:500;color:var(--soft);font-size:13px;margin-top:10px;letter-spacing:0}
+.meta span b{color:var(--red)}
 
 /* about */
 .about{background:var(--ink);color:#fff}
@@ -209,7 +212,7 @@ section{padding:120px 0}
 .final-in h2{font-size:clamp(38px,5vw,66px)}
 .final-in p{color:#b9c0d6;margin:16px auto 32px;max-width:520px}
 footer{background:var(--ink);color:#a7aec5;padding:70px 0 40px;font-size:14.5px}
-.cols{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:40px}
+.cols{display:grid;grid-template-columns:1.6fr 1fr;gap:40px}
 footer .logo{color:#fff;margin-bottom:12px}
 footer b{color:#fff;display:block;margin-bottom:8px}
 .legal{border-top:1px solid var(--line);margin-top:50px;padding-top:24px;font-size:13px;color:#6f7896}
@@ -349,12 +352,12 @@ footer b{color:#fff;display:block;margin-bottom:8px}
 
 <section id="work">
   <div class="wrap">
-    <div class="head rv"><span class="eyebrow">Our work</span><h2>See exactly <em class="s">what you get.</em></h2><p>We're new, so these are demo projects for made-up businesses, built to show the finished product. Click one to open the full site.</p></div>
+    <div class="head rv"><span class="eyebrow">Our work</span><h2>See exactly <em class="s">what you get.</em></h2><p>We're new, so these are demo sites for made-up businesses, built to the same standard as your site would be. Hover to scroll, click to open.</p></div>
     <div class="wgrid">
-      <a class="wk rv" href="demo-plumber.html"><div class="thumb" style="background:linear-gradient(135deg,#2b6cff,#0a2a7a)"><div class="bw"></div><b>Tirion Plumbing &amp; Heating</b></div><div class="meta">One-page trade website<span>Demo · fictional business</span></div></a>
-      <a class="wk rv d1" href="demo-barber.html"><div class="thumb" style="background:linear-gradient(135deg,#3a2e22,#111)"><div class="bw"></div><b>Gwennol Barbers</b></div><div class="meta">Salon site with prices and booking<span>Demo · fictional business</span></div></a>
-      <a class="wk rv d2" href="demo-garage.html"><div class="thumb" style="background:linear-gradient(135deg,#ff6a3d,#a3180a)"><div class="bw"></div><b>Lanes End MOT &amp; Service</b></div><div class="meta">Garage site with MOT booking form<span>Demo · fictional business</span></div></a>
-      <a class="wk rv d3" href="demo-health-check.html"><div class="thumb" style="background:linear-gradient(135deg,#21c07a,#0b5a35)"><div class="bw"></div><b>Sample listing check</b></div><div class="meta">The free one-page check you'll get<span>Sample · fictional business</span></div></a>
+      <a class="wk rv" href="demo-plumber.html"><div class="bf"><div class="bar"><i></i><i></i><i></i><span>tirionplumbing.demo</span></div><div class="shot" style="background-image:url(img/demo-plumber.jpg)"></div></div><div class="meta">Tirion Plumbing &amp; Heating<em>Trade site · call, WhatsApp, live opening hours</em><span>Demo · fictional business · <b>Open live demo →</b></span></div></a>
+      <a class="wk rv d1" href="demo-barber.html"><div class="bf"><div class="bar"><i></i><i></i><i></i><span>gwennolbarbers.demo</span></div><div class="shot" style="background-image:url(img/demo-barber.jpg)"></div></div><div class="meta">Gwennol Barbers<em>Salon site · price list, booking, open-now status</em><span>Demo · fictional business · <b>Open live demo →</b></span></div></a>
+      <a class="wk rv d2" href="demo-garage.html"><div class="bf"><div class="bar"><i></i><i></i><i></i><span>lanesendmot.demo</span></div><div class="shot" style="background-image:url(img/demo-garage.jpg)"></div></div><div class="meta">Lanes End MOT &amp; Service<em>Garage site · number-plate MOT booking</em><span>Demo · fictional business · <b>Open live demo →</b></span></div></a>
+      <a class="wk rv d3" href="demo-health-check.html"><div class="bf"><div class="bar"><i></i><i></i><i></i><span>shoppervue.com/check</span></div><div class="shot" style="background-image:url(img/demo-health-check.jpg)"></div></div><div class="meta">Sample listing check<em>The free one-page check you'll receive</em><span>Sample · fictional business · <b>Open live demo →</b></span></div></a>
     </div>
   </div>
 </section>
@@ -422,9 +425,8 @@ footer b{color:#fff;display:block;margin-bottom:8px}
   <div class="cols">
     <div><a class="logo" href="#top" aria-label="ShopperVue home"><span class="lw">Shopper<svg class="vmark" viewBox="-8 -6 100 120" aria-hidden="true"><defs><linearGradient id="vg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ef7a2a"/><stop offset="1" stop-color="#c2531a"/></linearGradient></defs><path d="M6 8h20l16 58L58 8h20L50 92H34Z" fill="url(#vg2)"/><ellipse class="rp1" cx="42" cy="99" rx="14" ry="3.2" fill="none" stroke="#d9651c" stroke-width="2.6"/><ellipse class="rp2" cx="42" cy="99" rx="27" ry="6" fill="none" stroke="#d9651c" stroke-width="2" opacity=".45"/></svg>ue</span></a><p>Google Maps, websites and reviews for local businesses in South Wales.</p></div>
     <div><b>Contact</b><a href="mailto:hello@shoppervue.com">hello@shoppervue.com</a><br>Port Talbot, Wales</div>
-    <div><b>Legal</b>ShopperVue is a trading name of Mousumi Kheto, sole trader, Port Talbot.<br><a href="privacy.html">Privacy notice</a></div>
   </div>
-  <div class="legal">© 2026 ShopperVue. Demo sites shown are fictional businesses.</div>
+  <div class="legal">© 2026 ShopperVue, a trading name of Mousumi Kheto, Port Talbot · <a href="privacy.html">Privacy</a> · Demo sites shown are fictional businesses.</div>
 </div></footer>
 
 <script>
